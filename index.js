@@ -28,6 +28,7 @@ MongoClient.connect(url, (err, client) => {
                 db.dropCollection("dishes", (err, result) => {
                     assert.equal(err, null);
 
+                    // client.close();
                     client.close();
                 });
             });
